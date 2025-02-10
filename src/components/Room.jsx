@@ -14,6 +14,7 @@ const Room = () => {
 
   const handleRoomChange = (event) => {
     const newRoom = event.target.value;
+    console.log("Room changed to:", newRoom)
     setSelectedRoom(newRoom);
     changeCurrentRoom(newRoom);
     sendMessage("", true, newRoom);

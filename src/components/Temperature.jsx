@@ -14,14 +14,14 @@ const Temperature = () => {
   // Send message when temperature changes
   useEffect(() => {
     if (currentRoom) {
-      const msg = JSON.stringify({
-        command: {
-          [currentRoom]: temperature,
-        },
-      });
-      sendMessage(msg);
+        const msg = JSON.stringify({
+            command: {
+                [currentRoom]: temperature,
+            },
+        });
+        sendMessage(msg);
     }
-  }, [temperature, currentRoom, sendMessage]); // Depend on temperature changes
+}, [temperature, currentRoom]); 
 
   function handleNegativeClick() {
     setTemperature((t) => Math.max(5, t - 1));
