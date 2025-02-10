@@ -26,7 +26,7 @@ export const GlobalProvider = ({ children }) => {
         let reconnectTimeout = null;
 
         const setupWebSocket = () => {
-            ws = new WebSocket("ws://localhost:8080");
+            ws = new WebSocket("wss://smarty-server-h1fo.onrender.com");
 
             ws.onopen = () => {
                 console.log("Connected to WebSocket");
