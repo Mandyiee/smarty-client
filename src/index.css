@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toggle {
+  @apply appearance-none w-12 h-6 rounded-full bg-gray-300 checked:bg-purple-600 relative cursor-pointer transition-colors;
+}
+.toggle:checked {
+  border: 1px solid white;
+}
+.toggle:before {
+  content: '';
+  @apply absolute w-4 h-4 bg-white rounded-full left-1 top-1 transition-transform;
+}
+
+.toggle:checked:before {
+  @apply transform translate-x-6;
+}
+
+.bg-coral-500 {
+  background-color: #FF7F50;
+}
+
+.temperature-circle {
+  width: 200px;
+  height: 200px;
+  margin: 2rem auto;
+  border-radius: 50%;
+  background: conic-gradient(from 215deg, #8b5cf6 0%, #8b5cf6 50%, #e5e7eb 50%, #e5e7eb 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temperature-circle:before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: white;
+  border-radius: 50%;
+}
